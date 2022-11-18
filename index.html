@@ -11,6 +11,16 @@ layout: default
       <i>Code review</i> is a widespread technique to improve software and reduce the number of flaws. In a code review, a programmer (other than the original code author(s)) reviews the source code. They ask questions and make suggestions for improving the software. In addition to identifying and eliminating errors, code review can improve overall quality by making the source code more readable and maintainable.</p>
 
     <hr class="col-3 col-md-2 mb-5">
+    {% for post in site.posts limit:1 %}
+    <h2>{{ post.title}}</h2>
+    <p class="blogdate">{{ post.date | date: "%d %B %Y" }}</p>
+    <p>
+      {{ post.content|truncatewords:60 }}
+    </p>
+    <p style="text-align:right"><a href="{{ post.url }}">Read more...</a></p>
+    {% endfor %}
+
+    <hr class="col-3 col-md-2 mb-5">
 
     <div class="row g-5">
       <div class="col-md-6">
