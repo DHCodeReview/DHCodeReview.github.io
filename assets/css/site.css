@@ -1,3 +1,16 @@
+:root{
+  --bs-primary:##E36414;
+  --bs-blue:##E36414;
+  --bs-link-color:#e37c1c;
+  --bs-link-hover-color: #FB8B24;
+}
+.btn-primary {
+  --bs-btn-bg: #e37c1c;
+  --bs-btn-border-color:#e37c1c;
+  --bs-btn-hover-bg: #FB8B24;
+  --bs-btn-hover-border-color: #FB8B24;
+}
+
 .icon-list li::before {
     display: block;
     flex-shrink: 0;
@@ -12,10 +25,4 @@
     color:#0F4C5C;
   }
 
-  a {
-    color: #E36414;    
-  }
 
-  a:hover {
-    color: #FB8B24;
-  }
