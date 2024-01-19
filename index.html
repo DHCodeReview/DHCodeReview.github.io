@@ -7,7 +7,7 @@ layout: default
 
 
 <h1>Community Code Review</h1>
-    <p class="fs-5 col-md-8">Welcome to the website of the Community Code Review Working Group of DHTech! </p>
+    <p class="fs-5 col-md-8">Welcome to the website of the Community Code Review Working Group of <a href="https://dh-tech.github.io/">DHTech</a>! </p>
 
    <p>
       <i>Code review</i> is a widespread technique to improve software and reduce the number of flaws. In a code review, a programmer (other than the original code author(s)) reviews the source code. They ask questions and make suggestions for improving the software. In addition to identifying and eliminating errors, code review can improve overall quality by making the source code more readable and maintainable.</p>
@@ -54,6 +54,16 @@ layout: default
       <a href="https://forms.gle/PepxF6U64AT2Y5TZA" class="btn btn-primary btn-sm" type="submit">Become a Reviewer</a>
     </p>
     <hr class="col-3 col-md-2 mb-5">
+    {% for post in site.posts limit:1 %}
+    <h2>{{ post.title}}</h2>
+    <p class="blogdate">{{ post.date | date: "%d %B %Y" }}</p>
+    <p>
+      {{ post.content|truncatewords:60 }}
+    </p>
+    <p style="text-align:right"><a href="{{ post.url }}">Read more...</a></p>
+    {% endfor %}
+
+    <hr class="col-3 col-md-2 mb-5">
 
     <div class="row g-5">
       <div class="col-md-6">
@@ -61,12 +71,13 @@ layout: default
         <p>Check out these links to find out more about what we are doing!</p>
         <ul class="icon-list ps-0">
           <li class="d-flex align-items-start mb-1"><a href="recent-reviews.html" rel="noopener">Recent Reviews</a></li>
+          <li class="d-flex align-items-start mb-1"><a href="poster.html" rel="noopener">DH2022 Poster</a></li>
         </ul>
       </div>
 
       <div class="col-md-6">
         <h2>Guides</h2>
-        <p>Intersted in submitting code for review or becoming a reviewer? Checks the links below for further information.</p>
+        <p>Interested in submitting code for review or becoming a reviewer? Check out the links below for further information.</p>
         <ul class="icon-list ps-0">
           <li class="d-flex align-items-start mb-1"><a href="https://github.com/DHCodeReview/DHCodeReview/wiki/Authors:-Preparing-a-Code-Review">Preparing a Code Review</a></li>
           <li class="d-flex align-items-start mb-1"><a href="https://github.com/DHCodeReview/DHCodeReview/wiki/Conducting-a-Code-Review">Conducting a Code Review</a></li>
