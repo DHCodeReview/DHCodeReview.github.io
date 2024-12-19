@@ -17,6 +17,13 @@ We have started the alpha phase of a community code review process. Below is a l
       <br>Submitter:  {{ review.submitters | join:", " }}
       <br>Reviewer: {{ review.reviewers | join:", " }}
       {% if review.facilitator %}<br>Facilitator: {{review.facilitator}}{% endif %}
+      {% if review.publications %}<br>Publications: 
+      <ul>
+        {% for pub in review.publications %}
+        <li><a target="_blank" href="{{pub.publication.link}}">{{pub.publication.title}}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
     </li>
   {% endfor %}
   </ul>
